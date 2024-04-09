@@ -1,188 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catan Stats</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  .column {
-    flex-basis: 30%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center; /* Center justify column titles */
-  }
-  footer {
-    text-align: center;
-    padding: 20px;
-  }
-  footer button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  footer .row {
-    margin-top: 10px;
-  }
-  .table-container {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  table {
-    width: 100%; /* Adjust table width as needed */
-    margin: 10px;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout with Footer</title>
+    <style>
+        /* Reset some default styles for consistency */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        /* Style for the main container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+        /* Style for the main content area */
+        .content {
+            flex: 1;
+            display: flex;
+        }
+        /* Style for the three columns */
+        .column {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center; /* Center justify column titles */
+        }
+        /* Style for the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .table-container {
+          display: flex;
+          justify-content: space-evenly;
+        }
+        table {
+          width: 100%; /* Adjust table width as needed */
+          margin: 10px;
+          border-collapse: collapse;
+        }
+        th, td {
+          border: 1px solid #ccc;
+          padding: 8px;
+          text-align: center;
+        }
+
+    </style>
 </head>
 <body>
-<div class="container">
-  <div class="column">
-    <h2>Rachel</h2>
-    <div class="table-container">
-      <div>
-          <table>
-            <caption>ROLLS</caption>
-            <tr><td>1</td><td>-</td></tr>
-            <tr><td>2</td><td>-</td></tr>
-            <tr><td>3</td><td>-</td></tr>
-            <tr><td>4</td><td>-</td></tr>
-            <tr><td>5</td><td>-</td></tr>
-            <tr><td>6</td><td>-</td></tr>
-            <tr><td>7</td><td>-</td></tr>
-            <tr><td>8</td><td>-</td></tr>
-            <tr><td>9</td><td>-</td></tr>
-            <tr><td>10</td><td>-</td></tr>
-            <tr><td>11</td><td>-</td></tr>
-            <tr><td>12</td><td>-</td></tr>
-            <tr><td>13</td><td>-</td></tr>
-            <tr><td>14</td><td>-</td></tr>
-            <tr><td>15</td><td>-</td></tr>
-            <tr><td>16</td><td>-</td></tr>
-            <tr><td>17</td><td>-</td></tr>
-            <tr><td>18</td><td>-</td></tr>
-            <tr><td>19</td><td>-</td></tr>
-            <tr><td>20</td><td>-</td></tr>
-          </table>
-      </div>
-      <div>
-        <table>
-            <caption>HISTORY</caption>
-            <tr><td>2</td><td>-</td></tr>
-            <tr><td>3</td><td>-</td></tr>
-            <tr><td>4</td><td>-</td></tr>
-            <tr><td>5</td><td>-</td></tr>
-            <tr><td>6</td><td>-</td></tr>
-            <tr><td>7</td><td>-</td></tr>
-            <tr><td>8</td><td>-</td></tr>
-            <tr><td>9</td><td>-</td></tr>
-            <tr><td>10</td><td>-</td></tr>
-            <tr><td>11</td><td>-</td></tr>
-            <tr><td>12</td><td>-</td></tr>
-        </table>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <h2>Doug</h2>
-    <div class="table-container">
-        <div>
-            <table>
-              <caption>ROLLS</caption>
-              <tr><td>1</td><td>-</td></tr>
-              <tr><td>2</td><td>-</td></tr>
-              <tr><td>3</td><td>-</td></tr>
-              <tr><td>4</td><td>-</td></tr>
-              <tr><td>5</td><td>-</td></tr>
-              <tr><td>6</td><td>-</td></tr>
-              <tr><td>7</td><td>-</td></tr>
-              <tr><td>8</td><td>-</td></tr>
-              <tr><td>9</td><td>-</td></tr>
-              <tr><td>10</td><td>-</td></tr>
-              <tr><td>11</td><td>-</td></tr>
-              <tr><td>12</td><td>-</td></tr>
-              <tr><td>13</td><td>-</td></tr>
-              <tr><td>14</td><td>-</td></tr>
-              <tr><td>15</td><td>-</td></tr>
-              <tr><td>16</td><td>-</td></tr>
-              <tr><td>17</td><td>-</td></tr>
-              <tr><td>18</td><td>-</td></tr>
-              <tr><td>19</td><td>-</td></tr>
-              <tr><td>20</td><td>-</td></tr>
-            </table>
+    <div class="container">
+        <div class="content">
+            <div class="column">
+              <b>Rachel</b>
+              <div class="table-container">
+                <div>
+                    <table>
+                      <caption>ROLLS</caption>
+                      <tr><td>1</td><td>-</td></tr>
+                      <tr><td>2</td><td>-</td></tr>
+                      <tr><td>3</td><td>-</td></tr>
+                      <tr><td>4</td><td>-</td></tr>
+                      <tr><td>5</td><td>-</td></tr>
+                      <tr><td>6</td><td>-</td></tr>
+                      <tr><td>7</td><td>-</td></tr>
+                      <tr><td>8</td><td>-</td></tr>
+                      <tr><td>9</td><td>-</td></tr>
+                      <tr><td>10</td><td>-</td></tr>
+                      <tr><td>11</td><td>-</td></tr>
+                      <tr><td>12</td><td>-</td></tr>
+                      <tr><td>13</td><td>-</td></tr>
+                      <tr><td>14</td><td>-</td></tr>
+                      <tr><td>15</td><td>-</td></tr>
+                      <tr><td>16</td><td>-</td></tr>
+                      <tr><td>17</td><td>-</td></tr>
+                      <tr><td>18</td><td>-</td></tr>
+                      <tr><td>19</td><td>-</td></tr>
+                      <tr><td>20</td><td>-</td></tr>
+                    </table>
+                </div>
+                <div>
+                  <table>
+                      <caption>HISTORY</caption>
+                      <tr><td>2</td><td>-</td></tr>
+                      <tr><td>3</td><td>-</td></tr>
+                      <tr><td>4</td><td>-</td></tr>
+                      <tr><td>5</td><td>-</td></tr>
+                      <tr><td>6</td><td>-</td></tr>
+                      <tr><td>7</td><td>-</td></tr>
+                      <tr><td>8</td><td>-</td></tr>
+                      <tr><td>9</td><td>-</td></tr>
+                      <tr><td>10</td><td>-</td></tr>
+                      <tr><td>11</td><td>-</td></tr>
+                      <tr><td>12</td><td>-</td></tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <b>Doug</b>
+              <div class="table-container">
+                  <div>
+                      <table>
+                        <caption>ROLLS</caption>
+                        <tr><td>1</td><td>-</td></tr>
+                        <tr><td>2</td><td>-</td></tr>
+                        <tr><td>3</td><td>-</td></tr>
+                        <tr><td>4</td><td>-</td></tr>
+                        <tr><td>5</td><td>-</td></tr>
+                        <tr><td>6</td><td>-</td></tr>
+                        <tr><td>7</td><td>-</td></tr>
+                        <tr><td>8</td><td>-</td></tr>
+                        <tr><td>9</td><td>-</td></tr>
+                        <tr><td>10</td><td>-</td></tr>
+                        <tr><td>11</td><td>-</td></tr>
+                        <tr><td>12</td><td>-</td></tr>
+                        <tr><td>13</td><td>-</td></tr>
+                        <tr><td>14</td><td>-</td></tr>
+                        <tr><td>15</td><td>-</td></tr>
+                        <tr><td>16</td><td>-</td></tr>
+                        <tr><td>17</td><td>-</td></tr>
+                        <tr><td>18</td><td>-</td></tr>
+                        <tr><td>19</td><td>-</td></tr>
+                        <tr><td>20</td><td>-</td></tr>
+                      </table>
+                  </div>
+                  <div>
+                    <table>
+                        <caption>HISTORY</caption>
+                        <tr><td>2</td><td>-</td></tr>
+                        <tr><td>3</td><td>-</td></tr>
+                        <tr><td>4</td><td>-</td></tr>
+                        <tr><td>5</td><td>-</td></tr>
+                        <tr><td>6</td><td>-</td></tr>
+                        <tr><td>7</td><td>-</td></tr>
+                        <tr><td>8</td><td>-</td></tr>
+                        <tr><td>9</td><td>-</td></tr>
+                        <tr><td>10</td><td>-</td></tr>
+                        <tr><td>11</td><td>-</td></tr>
+                        <tr><td>12</td><td>-</td></tr>
+                    </table>
+                  </div>
+              </div>
+            </div>
+            <div class="column">
+              <b>TOTAL</b>
+              <div class="table-container">
+                <table>
+                  <caption>HISTORY</caption>
+                  <tr><td>2</td><td>-</td></tr>
+                  <tr><td>3</td><td>-</td></tr>
+                  <tr><td>4</td><td>-</td></tr>
+                  <tr><td>5</td><td>-</td></tr>
+                  <tr><td>6</td><td>-</td></tr>
+                  <tr><td>7</td><td>-</td></tr>
+                  <tr><td>8</td><td>-</td></tr>
+                  <tr><td>9</td><td>-</td></tr>
+                  <tr><td>10</td><td>-</td></tr>
+                  <tr><td>11</td><td>-</td></tr>
+                  <tr><td>12</td><td>-</td></tr>
+                </table>
+              </div>
+            </div>
         </div>
-        <div>
-          <table>
-              <caption>HISTORY</caption>
-              <tr><td>2</td><td>-</td></tr>
-              <tr><td>3</td><td>-</td></tr>
-              <tr><td>4</td><td>-</td></tr>
-              <tr><td>5</td><td>-</td></tr>
-              <tr><td>6</td><td>-</td></tr>
-              <tr><td>7</td><td>-</td></tr>
-              <tr><td>8</td><td>-</td></tr>
-              <tr><td>9</td><td>-</td></tr>
-              <tr><td>10</td><td>-</td></tr>
-              <tr><td>11</td><td>-</td></tr>
-              <tr><td>12</td><td>-</td></tr>
-          </table>
-        </div>
+        <footer>
+            <div class="row">
+              <button>PREV</button>
+              <button>NEXT</button>
+              <button>CLEAR</button>
+              <button>ROLL</button>
+            </div>
+            <div class="row">
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <button>7</button>
+              <button>8</button>
+              <button>9</button>
+              <button>10</button>
+              <button>11</button>
+              <button>12</button>
+            </div>
+        </footer>
     </div>
-  </div>
-  <div class="column">
-    <h2>Total</h2>
-    <div class="table-container">
-      <table>
-        <caption>HISTORY</caption>
-        <tr><td>2</td><td>-</td></tr>
-        <tr><td>3</td><td>-</td></tr>
-        <tr><td>4</td><td>-</td></tr>
-        <tr><td>5</td><td>-</td></tr>
-        <tr><td>6</td><td>-</td></tr>
-        <tr><td>7</td><td>-</td></tr>
-        <tr><td>8</td><td>-</td></tr>
-        <tr><td>9</td><td>-</td></tr>
-        <tr><td>10</td><td>-</td></tr>
-        <tr><td>11</td><td>-</td></tr>
-        <tr><td>12</td><td>-</td></tr>
-      </table>
-    </div>
-  </div>
-</div>
-<footer>
-  <div class="row">
-    <button>PREV</button>
-    <button>NEXT</button>
-    <button>CLEAR</button>
-    <button>ROLL</button>
-  </div>
-  <div class="row">
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button>10</button>
-    <button>11</button>
-    <button>12</button>
-  </div>
-</footer>
 </body>
 </html>
