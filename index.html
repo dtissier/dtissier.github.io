@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>My iOS HTML App with JSON Data</title>
-</head>
 <body>
-    <h1>Hello, iOS!</h1>
-    <div id="json-data"></div>
 
-    <script>
-        // JavaScript code to load and display JSON data
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                const jsonDataDiv = document.getElementById('json-data');
-                jsonDataDiv.textContent = JSON.stringify(data, null, 2);
-            })
-            .catch(error => {
-                jsonDataDiv.textContent = 'Error loading JSON:';
-            });
-    </script>
+<h1>HTML Links</h1>
+
+<p><a href="catan_stats/index.html">Visit W3Schools.com!</a></p>
+
 </body>
 </html>
+
