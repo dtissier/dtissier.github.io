@@ -51,6 +51,7 @@
         th, td {
           border: 1px solid #ccc;
           padding: 8px;
+          font-size: 14px;
           text-align: center;
         }
         td {
@@ -61,9 +62,17 @@
             background-color: black;
         }
         button {
-          height: 40px;
+          height: 60px;
           margin: 5px;
           border-radius: 4px; /* Adjust the border-radius to change the roundness */
+          flex-grow: 1;
+          margin-right: 10px; /* Add margin between buttons */
+          font-size: 20px;
+          font-weight: bold;
+       }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
         }
 
     </style>
@@ -121,23 +130,23 @@
         </div>
         <footer>
             <div class="row">
-              <button id="prev">PREV</button>
-              <button id="next">NEXT</button>
-              <button id="clear">CLEAR</button>
-              <button id="roll">ROLL</button>
+              <button id="back">BACK</button>
+              <button id="new_game">NEW GAME</button>
             </div>
             <div class="row">
-              <button id="roll_2">2</button>
-              <button id="roll_3">3</button>
-              <button id="roll_4">4</button>
-              <button id="roll_5">5</button>
-              <button id="roll_6">6</button>
-              <button id="roll_7">7</button>
-              <button id="roll_8">8</button>
-              <button id="roll_9">9</button>
-              <button id="roll_10">10</button>
-              <button id="roll_11">11</button>
-              <button id="roll_12">12</button>
+              <div class="button-container">
+                  <button id="roll_2">2</button>
+                  <button id="roll_3">3</button>
+                  <button id="roll_4">4</button>
+                  <button id="roll_5">5</button>
+                  <button id="roll_6">6</button>
+                  <button id="roll_7">7</button>
+                  <button id="roll_8">8</button>
+                  <button id="roll_9">9</button>
+                  <button id="roll_10">10</button>
+                  <button id="roll_11">11</button>
+                  <button id="roll_12">12</button>
+                </div>
             </div>
         </footer>
     </div>
