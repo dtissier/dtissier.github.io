@@ -5,6 +5,7 @@
 var sPlayer = 0;
 var sRound = 0;
 var sRolls = {};
+var sBlink = true;
 
 // *******************************************************************************
 // FUNCTION
@@ -20,6 +21,27 @@ function PlayerAndRollsToString(inPlayer, inRound) {
 function PlayerAndRoundToString(inPlayer, inRound) {
     var id = 'p' + inPlayer.toString() + '_roll_' + inRound.toString();
     return id;
+}
+
+// *******************************************************************************
+// FUNCTION
+// *******************************************************************************
+function UpdateSelectedRound() {
+    for (let player = 0; player < 2; player++) {
+        for (let round = 0; round < 20; round++) {
+            var id = PlayerAndRoundToString(player, round);
+            var element = document.getElementById(id);
+            
+            if (sPlayer == player && sRound == round) {
+                element.style.backgroundColor = '#777777';
+                element.style.color = 'white';
+            }
+            else {
+               element.style.backgroundColor = '#dddddd';
+               element.style.color = 'black';
+           }
+        }
+    }
 }
 
 // *******************************************************************************
@@ -68,7 +90,8 @@ function DoRoll(inRoll) {
     var id = PlayerAndRoundToString(sPlayer, sRound);
     document.getElementById(id).innerHTML = inRoll.toString();
     
-    AddRoll(PlayerAndRollsToString(sPlayer, inRoll));
+    var key = PlayerAndRollsToString(sPlayer, inRoll);
+    AddRoll(key);
     AddRoll("rolls_" + inRoll.toString());
     
     sPlayer = sPlayer + 1;
@@ -76,6 +99,26 @@ function DoRoll(inRoll) {
         sPlayer = 0;
         sRound = sRound + 1;
     }
+    
+    UpdateSelectedRound();
+}
+
+// *******************************************************************************
+// FUNCTION
+// *******************************************************************************
+function BlinkSelection()
+{
+    sBlink = !sBlink;
+    var id = PlayerAndRoundToString(sPlayer, sRound);
+    var element = document.getElementById(id);
+    if (sBlink) {
+        element.style.backgroundColor = '#777777';
+        element.style.color = 'white';
+    }
+    else {
+       element.style.backgroundColor = '#dddddd';
+       element.style.color = 'black';
+   }
 }
 
 // *******************************************************************************
@@ -93,3 +136,5 @@ document.getElementById("roll_9").addEventListener("click", function(){DoRoll(9)
 document.getElementById("roll_10").addEventListener("click", function(){DoRoll(10)});
 document.getElementById("roll_11").addEventListener("click", function(){DoRoll(11)});
 document.getElementById("roll_12").addEventListener("click", function(){DoRoll(12)});
+UpdateSelectedRound();
+setInterval(BlinkSelection, 500);
