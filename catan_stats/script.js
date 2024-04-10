@@ -7,9 +7,9 @@ var sRound = 0;
 var sRolls = {};
 var sBlink = true;
 
-var sLastPlayer = 0;
-var sLastRound = 0;
-var sLastRoll = 0;
+var sLastPlayer = [];
+var sLastRound = [];
+var sLastRoll = [];
 
 // *******************************************************************************
 // FUNCTION
@@ -118,9 +118,9 @@ function DoRoll(inRoll) {
     AddRoll(key);
     AddRoll("rolls_" + inRoll.toString());
     
-    sLastPlayer = sPlayer;
-    sLastRound = sRound;
-    sLastRoll = inRoll;
+    sLastPlayer.push(sPlayer);
+    sLastRound.push(sRound);
+    sLastRoll.push(inRoll);
 
     sPlayer = sPlayer + 1;
     if (sPlayer == 2) {
@@ -135,19 +135,17 @@ function DoRoll(inRoll) {
 // FUNCTION
 // *******************************************************************************
 function Back() {
-    if (sLastPlayer != 0 || sLastRound != 0) {
-        sPlayer = sLastPlayer;
-        sRound = sLastRound;
-        
-        var key = PlayerAndRollsToString(sLastPlayer, sLastRoll);
+    if (sLastPlayer.length != 0) {
+        sPlayer = sLastPlayer.pop();
+        sRound = sLastRound.pop();
+        let last_roll = sLastRoll.pop();
+
+        var key = PlayerAndRollsToString(sPlayer, last_roll);
         RemoveRoll(key);
-        RemoveRoll("rolls_" + sLastRoll.toString());
+        RemoveRoll("rolls_" + last_roll.toString());
         
         var id = PlayerAndRoundToString(sPlayer, sRound);
         document.getElementById(id).innerHTML = '-';
-        
-        sLastPlayer = 0;
-        sLastRound = 0;
         
         UpdateSelectedRound();
     }
