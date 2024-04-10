@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catan Stats</title>
+    <script src="script.js" defer></script>
     <style>
         /* Reset some default styles for consistency */
         body, html {
@@ -11,6 +12,7 @@
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
+            background-color: #777777;
         }
         /* Style for the main container */
         .container {
@@ -22,12 +24,12 @@
         .content {
             flex: 1;
             display: flex;
+            justify-content: space-evenly;
         }
         /* Style for the three columns */
         .column {
             flex: 1;
             padding: 10px;
-            border: 1px solid #ccc;
             text-align: center; /* Center justify column titles */
         }
         /* Style for the footer */
@@ -51,6 +53,13 @@
           padding: 8px;
           text-align: center;
         }
+        td {
+            background-color: #dddddd;
+        }
+        th {
+            color: white;
+            background-color: black;
+        }
         button {
           height: 40px;
           margin: 5px;
@@ -63,136 +72,72 @@
     <div class="container">
         <div class="content">
             <div class="column">
-              <b>Rachel</b>
               <div class="table-container">
                 <div>
                     <table>
-                      <caption>ROLLS</caption>
-                      <tr><td>1</td><td>-</td></tr>
-                      <tr><td>2</td><td>-</td></tr>
-                      <tr><td>3</td><td>-</td></tr>
-                      <tr><td>4</td><td>-</td></tr>
-                      <tr><td>5</td><td>-</td></tr>
-                      <tr><td>6</td><td>-</td></tr>
-                      <tr><td>7</td><td>-</td></tr>
-                      <tr><td>8</td><td>-</td></tr>
-                      <tr><td>9</td><td>-</td></tr>
-                      <tr><td>10</td><td>-</td></tr>
-                      <tr><td>11</td><td>-</td></tr>
-                      <tr><td>12</td><td>-</td></tr>
-                      <tr><td>13</td><td>-</td></tr>
-                      <tr><td>14</td><td>-</td></tr>
-                      <tr><td>15</td><td>-</td></tr>
-                      <tr><td>16</td><td>-</td></tr>
-                      <tr><td>17</td><td>-</td></tr>
-                      <tr><td>18</td><td>-</td></tr>
-                      <tr><td>19</td><td>-</td></tr>
-                      <tr><td>20</td><td>-</td></tr>
+                      <tr><th>ROLL</td><th id="p0_roll_name">RACHEL</td><th id="p1_roll_name">DOUG</th></tr>
+                      <tr><th>1</th><td id="p0_roll_0">-</td><td id="p1_roll_0">-</td></tr>
+                      <tr><th>2</th><td id="p0_roll_1">-</td><td id="p1_roll_1">-</td></tr>
+                      <tr><th>3</th><td id="p0_roll_2">-</td><td id="p1_roll_2">-</td></tr>
+                      <tr><th>4</th><td id="p0_roll_3">-</td><td id="p1_roll_3">-</td></tr>
+                      <tr><th>5</th><td id="p0_roll_4">-</td><td id="p1_roll_4">-</td></tr>
+                      <tr><th>6</th><td id="p0_roll_5">-</td><td id="p1_roll_5">-</td></tr>
+                      <tr><th>7</th><td id="p0_roll_6">-</td><td id="p1_roll_6">-</td></tr>
+                      <tr><th>8</th><td id="p0_roll_7">-</td><td id="p1_roll_7">-</td></tr>
+                      <tr><th>9</th><td id="p0_roll_8">-</td><td id="p1_roll_8">-</td></tr>
+                      <tr><th>10</th><td id="p0_roll_9">-</td><td id="p1_roll_9">-</td></tr>
+                      <tr><th>11</th><td id="p0_roll_10">-</td><td id="p1_roll_10">-</td></tr>
+                      <tr><th>12</th><td id="p0_roll_11">-</td><td id="p1_roll_11">-</td></tr>
+                      <tr><th>13</th><td id="p0_roll_12">-</td><td id="p1_roll_12">-</td></tr>
+                      <tr><th>14</th><td id="p0_roll_13">-</td><td id="p1_roll_13">-</td></tr>
+                      <tr><th>15</th><td id="p0_roll_14">-</td><td id="p1_roll_14">-</td></tr>
+                      <tr><th>16</th><td id="p0_roll_15">-</td><td id="p1_roll_15">-</td></tr>
+                      <tr><th>17</th><td id="p0_roll_16">-</td><td id="p1_roll_16">-</td></tr>
+                      <tr><th>18</th><td id="p0_roll_17">-</td><td id="p1_roll_17">-</td></tr>
+                      <tr><th>19</th><td id="p0_roll_18">-</td><td id="p1_roll_18">-</td></tr>
+                      <tr><th>20</th><td id="p0_roll_19">-</td><td id="p1_roll_19">-</td></tr>
                     </table>
-                </div>
-                <div>
-                  <table>
-                      <caption>HISTORY</caption>
-                      <tr><td>2</td><td>-</td></tr>
-                      <tr><td>3</td><td>-</td></tr>
-                      <tr><td>4</td><td>-</td></tr>
-                      <tr><td>5</td><td>-</td></tr>
-                      <tr><td>6</td><td>-</td></tr>
-                      <tr><td>7</td><td>-</td></tr>
-                      <tr><td>8</td><td>-</td></tr>
-                      <tr><td>9</td><td>-</td></tr>
-                      <tr><td>10</td><td>-</td></tr>
-                      <tr><td>11</td><td>-</td></tr>
-                      <tr><td>12</td><td>-</td></tr>
-                  </table>
                 </div>
               </div>
             </div>
             <div class="column">
-              <b>Doug</b>
-              <div class="table-container">
-                  <div>
-                      <table>
-                        <caption>ROLLS</caption>
-                        <tr><td>1</td><td>-</td></tr>
-                        <tr><td>2</td><td>-</td></tr>
-                        <tr><td>3</td><td>-</td></tr>
-                        <tr><td>4</td><td>-</td></tr>
-                        <tr><td>5</td><td>-</td></tr>
-                        <tr><td>6</td><td>-</td></tr>
-                        <tr><td>7</td><td>-</td></tr>
-                        <tr><td>8</td><td>-</td></tr>
-                        <tr><td>9</td><td>-</td></tr>
-                        <tr><td>10</td><td>-</td></tr>
-                        <tr><td>11</td><td>-</td></tr>
-                        <tr><td>12</td><td>-</td></tr>
-                        <tr><td>13</td><td>-</td></tr>
-                        <tr><td>14</td><td>-</td></tr>
-                        <tr><td>15</td><td>-</td></tr>
-                        <tr><td>16</td><td>-</td></tr>
-                        <tr><td>17</td><td>-</td></tr>
-                        <tr><td>18</td><td>-</td></tr>
-                        <tr><td>19</td><td>-</td></tr>
-                        <tr><td>20</td><td>-</td></tr>
-                      </table>
-                  </div>
-                  <div>
-                    <table>
-                        <caption>HISTORY</caption>
-                        <tr><td>2</td><td>-</td></tr>
-                        <tr><td>3</td><td>-</td></tr>
-                        <tr><td>4</td><td>-</td></tr>
-                        <tr><td>5</td><td>-</td></tr>
-                        <tr><td>6</td><td>-</td></tr>
-                        <tr><td>7</td><td>-</td></tr>
-                        <tr><td>8</td><td>-</td></tr>
-                        <tr><td>9</td><td>-</td></tr>
-                        <tr><td>10</td><td>-</td></tr>
-                        <tr><td>11</td><td>-</td></tr>
-                        <tr><td>12</td><td>-</td></tr>
-                    </table>
-                  </div>
-              </div>
-            </div>
-            <div class="column">
-              <b>TOTAL</b>
               <div class="table-container">
                 <table>
-                  <caption>HISTORY</caption>
-                  <tr><td>2</td><td>-</td></tr>
-                  <tr><td>3</td><td>-</td></tr>
-                  <tr><td>4</td><td>-</td></tr>
-                  <tr><td>5</td><td>-</td></tr>
-                  <tr><td>6</td><td>-</td></tr>
-                  <tr><td>7</td><td>-</td></tr>
-                  <tr><td>8</td><td>-</td></tr>
-                  <tr><td>9</td><td>-</td></tr>
-                  <tr><td>10</td><td>-</td></tr>
-                  <tr><td>11</td><td>-</td></tr>
-                  <tr><td>12</td><td>-</td></tr>
+                    <tr><th>ROLLS</th><th id="p0_rolls_name">RACHEL</th><th id="p1_rolls_name">DOUG</th><th>TOTAL</th></tr>
+                    <tr><th>2</th><td id="p0_rolls_2">-</td><td id="p1_rolls_2">-</td><td id="rolls_2">-</td></tr>
+                    <tr><th>3</th><td id="p0_rolls_3">-</td><td id="p1_rolls_3">-</td><td id="rolls_3">-</td></tr>
+                    <tr><th>4</th><td id="p0_rolls_4">-</td><td id="p1_rolls_4">-</td><td id="rolls_4">-</td></tr>
+                    <tr><th>5</th><td id="p0_rolls_5">-</td><td id="p1_rolls_5">-</td><td id="rolls_5">-</td></tr>
+                    <tr><th>6</th><td id="p0_rolls_6">-</td><td id="p1_rolls_6">-</td><td id="rolls_6">-</td></tr>
+                    <tr><th>7</th><td id="p0_rolls_7">-</td><td id="p1_rolls_7">-</td><td id="rolls_7">-</td></tr>
+                    <tr><th>8</th><td id="p0_rolls_8">-</td><td id="p1_rolls_8">-</td><td id="rolls_8">-</td></tr>
+                    <tr><th>9</th><td id="p0_rolls_9">-</td><td id="p1_rolls_9">-</td><td id="rolls_9">-</td></tr>
+                    <tr><th>10</th><td id="p0_rolls_10">-</td><td id="p1_rolls_10">-</td><td id="rolls_10">-</td></tr>
+                    <tr><th>11</th><td id="p0_rolls_11">-</td><td id="p1_rolls_11">-</td><td id="rolls_11">-</td></tr>
+                    <tr><th>12</th><td id="p0_rolls_12">-</td><td id="p1_rolls_12">-</td><td id="rolls_12">-</td></tr>
                 </table>
               </div>
             </div>
         </div>
         <footer>
             <div class="row">
-              <button>PREV</button>
-              <button>NEXT</button>
-              <button>CLEAR</button>
-              <button>ROLL</button>
+              <button id="prev">PREV</button>
+              <button id="next">NEXT</button>
+              <button id="clear">CLEAR</button>
+              <button id="roll">ROLL</button>
             </div>
             <div class="row">
-              <button>2</button>
-              <button>3</button>
-              <button>4</button>
-              <button>5</button>
-              <button>6</button>
-              <button>7</button>
-              <button>8</button>
-              <button>9</button>
-              <button>10</button>
-              <button>11</button>
-              <button>12</button>
+              <button id="roll_2">2</button>
+              <button id="roll_3">3</button>
+              <button id="roll_4">4</button>
+              <button id="roll_5">5</button>
+              <button id="roll_6">6</button>
+              <button id="roll_7">7</button>
+              <button id="roll_8">8</button>
+              <button id="roll_9">9</button>
+              <button id="roll_10">10</button>
+              <button id="roll_11">11</button>
+              <button id="roll_12">12</button>
             </div>
         </footer>
     </div>
