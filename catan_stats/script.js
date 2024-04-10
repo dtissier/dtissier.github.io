@@ -49,7 +49,7 @@ function UpdateSelectedRound() {
 // *******************************************************************************
 function DoClear() {
     sPlayer = 0;
-    sRoll = 0;
+    sRound = 0;
     sRolls = {};
     
     for (let player = 0; player < 2; player++) {
@@ -68,6 +68,8 @@ function DoClear() {
             document.getElementById(key).innerHTML = '-';
         }
     }
+    
+    UpdateSelectedRound();
 }
 
 // *******************************************************************************
