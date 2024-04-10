@@ -11,6 +11,8 @@ var sLastPlayer = [];
 var sLastRound = [];
 var sLastRoll = [];
 
+const kNumRounds = 50;
+
 // *******************************************************************************
 // FUNCTION
 // *******************************************************************************
@@ -31,18 +33,38 @@ function PlayerAndRoundToString(inPlayer, inRound) {
 // FUNCTION
 // *******************************************************************************
 function UpdateSelectedRound() {
+    var last_player = -1;
+    var last_round = -1;
+    
+    if (sLastPlayer.length > 0) {
+        last_player = sLastPlayer[sLastPlayer.length-1];
+    }
+    if (sLastRound.length > 0) {
+        last_round = sLastRound[sLastRound.length-1];
+    }
+
     for (let player = 0; player < 2; player++) {
-        for (let round = 0; round < 20; round++) {
+        for (let round = 0; round < kNumRounds; round++) {
             var id = PlayerAndRoundToString(player, round);
             var element = document.getElementById(id);
             
-            if (sPlayer == player && sRound == round) {
-                element.style.backgroundColor = '#777777';
+            if (last_player == player && last_round == round) {
+                element.style.backgroundColor = '#d59100';
+                element.style.color = 'black';
+                element.style.fontWeight = 'bold';
+                element.style.fontSize = '14px';
+            }
+            else if (sPlayer == player && sRound == round) {
+                element.style.backgroundColor = '#305470';
                 element.style.color = 'white';
+                element.style.fontWeight = 'bold';
+                element.style.fontSize = '12px';
             }
             else {
-               element.style.backgroundColor = '#dddddd';
-               element.style.color = 'black';
+                element.style.backgroundColor = '#bfc4c8';
+                element.style.color = 'black';
+                element.style.fontWeight = 'normal';
+                element.style.fontSize = '12px';
            }
         }
     }
@@ -59,7 +81,7 @@ function NewGame() {
         sRolls = {};
         
         for (let player = 0; player < 2; player++) {
-            for (let round = 0; round < 20; round++) {
+            for (let round = 0; round < kNumRounds; round++) {
                 var id = PlayerAndRoundToString(player, round);
                 document.getElementById(id).innerHTML = '-';
             }
@@ -144,9 +166,6 @@ function Back() {
         RemoveRoll(key);
         RemoveRoll("rolls_" + last_roll.toString());
         
-        var id = PlayerAndRoundToString(sPlayer, sRound);
-        document.getElementById(id).innerHTML = '-';
-        
         UpdateSelectedRound();
     }
 }
@@ -159,6 +178,8 @@ function SwapNames() {
     var p1_name = document.getElementById('p1_roll_name').innerHTML;
     document.getElementById('p0_roll_name').innerHTML = p1_name;
     document.getElementById('p1_roll_name').innerHTML = p0_name;
+    document.getElementById('p0_roll_name_b').innerHTML = p1_name;
+    document.getElementById('p1_roll_name_b').innerHTML = p0_name;
     document.getElementById('p0_rolls_name').innerHTML = p1_name;
     document.getElementById('p1_rolls_name').innerHTML = p0_name;
 
@@ -176,7 +197,7 @@ function BlinkSelection() {
         element.style.color = 'white';
     }
     else {
-       element.style.backgroundColor = '#dddddd';
+       element.style.backgroundColor = '#bfc4c8';
        element.style.color = 'black';
    }
 }
@@ -199,4 +220,4 @@ document.getElementById("roll_10").addEventListener("click", function(){DoRoll(1
 document.getElementById("roll_11").addEventListener("click", function(){DoRoll(11)});
 document.getElementById("roll_12").addEventListener("click", function(){DoRoll(12)});
 UpdateSelectedRound();
-setInterval(BlinkSelection, 500);
+// setInterval(BlinkSelection, 500);
