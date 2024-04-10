@@ -154,6 +154,19 @@ function Back() {
 // *******************************************************************************
 // FUNCTION
 // *******************************************************************************
+function SwapNames() {
+    var p0_name = document.getElementById('p0_roll_name').innerHTML;
+    var p1_name = document.getElementById('p1_roll_name').innerHTML;
+    document.getElementById('p0_roll_name').innerHTML = p1_name;
+    document.getElementById('p1_roll_name').innerHTML = p0_name;
+    document.getElementById('p0_rolls_name').innerHTML = p1_name;
+    document.getElementById('p1_rolls_name').innerHTML = p0_name;
+
+}
+
+// *******************************************************************************
+// FUNCTION
+// *******************************************************************************
 function BlinkSelection() {
     sBlink = !sBlink;
     var id = PlayerAndRoundToString(sPlayer, sRound);
@@ -172,6 +185,7 @@ function BlinkSelection() {
 // INIT
 // *******************************************************************************
 document.getElementById("back").addEventListener("click", Back);
+document.getElementById("swap_names").addEventListener("click", SwapNames);
 document.getElementById("new_game").addEventListener("click", NewGame);
 document.getElementById("roll_2").addEventListener("click", function(){DoRoll(2)});
 document.getElementById("roll_3").addEventListener("click", function(){DoRoll(3)});
