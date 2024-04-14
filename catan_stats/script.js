@@ -11,7 +11,7 @@ var sLastPlayer = [];
 var sLastRound = [];
 var sLastRoll = [];
 
-const kNumRounds = 48;
+const kNumRounds = 50;
 
 // *******************************************************************************
 // FUNCTION
