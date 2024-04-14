@@ -75,7 +75,9 @@
             display: flex;
             justify-content: space-between;
         }
-
+        .button-action {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -109,6 +111,7 @@
                       <tr><th>21</th><td id="p0_roll_20">-</td><td id="p1_roll_20">-</td></tr>
                       <tr><th>22</th><td id="p0_roll_21">-</td><td id="p1_roll_21">-</td></tr>
                       <tr><th>23</th><td id="p0_roll_22">-</td><td id="p1_roll_22">-</td></tr>
+                      <tr><th>24</th><td id="p0_roll_23">-</td><td id="p1_roll_23">-</td></tr>
                     </table>
                 </div>
               </div>
@@ -118,7 +121,6 @@
                 <div>
                     <table>
                       <tr><th>ROLL</td><th id="p0_roll_name_b">RACHEL</td><th id="p1_roll_name_b">DOUG</th></tr>
-                      <tr><th>24</th><td id="p0_roll_23">-</td><td id="p1_roll_23">-</td></tr>
                       <tr><th>25</th><td id="p0_roll_24">-</td><td id="p1_roll_24">-</td></tr>
                       <tr><th>26</th><td id="p0_roll_25">-</td><td id="p1_roll_25">-</td></tr>
                       <tr><th>27</th><td id="p0_roll_26">-</td><td id="p1_roll_26">-</td></tr>
@@ -141,6 +143,8 @@
                       <tr><th>44</th><td id="p0_roll_43">-</td><td id="p1_roll_43">-</td></tr>
                       <tr><th>45</th><td id="p0_roll_44">-</td><td id="p1_roll_44">-</td></tr>
                       <tr><th>46</th><td id="p0_roll_45">-</td><td id="p1_roll_45">-</td></tr>
+                      <tr><th>47</th><td id="p0_roll_46">-</td><td id="p1_roll_46">-</td></tr>
+                      <tr><th>48</th><td id="p0_roll_47">-</td><td id="p1_roll_47">-</td></tr>
                     </table>
                 </div>
               </div>
@@ -162,9 +166,9 @@
                     <tr><th>12</th><td id="p0_rolls_12">-</td><td id="p1_rolls_12">-</td><td id="rolls_12">-</td></tr>
                 </table>
               </div>
-              <button id="back">BACK</button>
-              <button id="swap_names">SWAP NAMES</button>
-              <button id="new_game">NEW GAME</button>
+              <button class="button-action" id="back">BACK</button>
+              <button class="button-action" id="swap_names">SWAP NAMES</button>
+              <button class="button-action" id="new_game">NEW GAME</button>
             </div>
         </div>
         <footer>

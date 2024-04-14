@@ -11,7 +11,7 @@ var sLastPlayer = [];
 var sLastRound = [];
 var sLastRoll = [];
 
-const kNumRounds = 46;
+const kNumRounds = 48;
 
 // *******************************************************************************
 // FUNCTION
@@ -79,7 +79,10 @@ function NewGame() {
         sPlayer = 0;
         sRound = 0;
         sRolls = {};
-        
+        sLastPlayer = [];
+        sLastRound = [];
+        sLastRoll = [];
+
         for (let player = 0; player < 2; player++) {
             for (let round = 0; round < kNumRounds; round++) {
                 var id = PlayerAndRoundToString(player, round);
